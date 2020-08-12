@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --config ./scripts/webpack.dev.config.js",
     "build": "webpack --config ./scripts/webpack.prod.config.js",
     "dll": "webpack --config ./scripts/webpack.dll.config.js",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -E GIT_PARAMS"
   },
   "author": "",
   "license": "ISC",
@@ -42,6 +43,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "happypack": "^5.0.1",
     "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
     "image-webpack-loader": "^6.0.0",
     "less": "^3.12.2",
     "less-loader": "^6.2.0",

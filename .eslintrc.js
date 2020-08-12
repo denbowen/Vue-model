@@ -41,6 +41,7 @@ module.exports = {
   rules: {
     'no-new': 0,
     'max-len': 0,
+    'quote-props': 0,
     'prefer-promise-reject-errors': 0,
     'import/extensions': 0,
     'import/named': 2,
