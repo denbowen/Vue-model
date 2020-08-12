@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config ./scripts/webpack.dev.config.js",
     "build": "webpack --config ./scripts/webpack.prod.config.js",
-    "dll": "webpack --config ./scripts/webpack.dll.config.js"
+    "dll": "webpack --config ./scripts/webpack.dll.config.js",
+    "precommit": "lint-staged"
   },
   "author": "",
   "license": "ISC",
