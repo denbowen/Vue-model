@@ -1,5 +1,5 @@
 {
-  "name": "vue-base-config",
+  "name": "vue-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -74,6 +74,9 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "src/**/*.{vue,js,jsx}": [
