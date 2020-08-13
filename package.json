@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --config ./scripts/webpack.dev.config.js",
     "build": "webpack --config ./scripts/webpack.prod.config.js",
     "dll": "webpack --config ./scripts/webpack.dll.config.js",
-    "precommit": "lint-staged --verbose",
+    "precommit": "lint-staged",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "stylelint": "stylelint 'src/**/*.{vue,less}'",
     "stylelint:fix": "stylelint 'src/**/*.{vue,less}' --fix",
@@ -74,6 +74,11 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
