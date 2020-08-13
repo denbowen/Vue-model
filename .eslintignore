@@ -7,3 +7,4 @@
 /mock/
 
 .eslintrc.js
+.commitlint.config.js
