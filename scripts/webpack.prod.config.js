@@ -12,8 +12,8 @@ module.exports = merge(baseConfig, {
   mode: 'production',
   devtool: 'inline-source-map',
   output: {
-    filename: '[name].js',
-    chunkFilename: '[name].[chunckhash].js',
+    filename: '[name].[chunkhash:8].js',
+    chunkFilename: '[name].[chunkhash:8].js',
     publicPath: './',
   },
   optimization: {
@@ -39,12 +39,18 @@ module.exports = merge(baseConfig, {
       },
       {
         test: /\.less$/,
-        exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'less-loader',
           'postcss-loader',
+          {
+            loader: 'less-loader',
+            options: {
+              lessOptions: {
+                javascriptEnabled: true,
+              },
+            },
+          },
         ],
       },
     ],
