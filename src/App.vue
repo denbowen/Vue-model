@@ -1,9 +1,8 @@
 <template>
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
-
 export default {
   name: 'App',
   components: {},
@@ -14,10 +13,11 @@ export default {
 </script>
 
 <style lang="less">
-html, body {
+html,
+body {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-size: 14px;
 }
 </style>

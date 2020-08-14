@@ -1,5 +1,5 @@
 {
-  "name": "vue-base-config",
+  "name": "vue-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,13 @@
     "build": "webpack --config ./scripts/webpack.prod.config.js",
     "dll": "webpack --config ./scripts/webpack.dll.config.js",
     "precommit": "lint-staged",
-    "commitmsg": "commitlint -E GIT_PARAMS"
+    "commitmsg": "commitlint -E GIT_PARAMS",
+    "stylelint": "stylelint 'src/**/*.{vue,less}'",
+    "stylelint:fix": "stylelint 'src/**/*.{vue,less}' --fix",
+    "eslint": "eslint 'src/**/*.{vue,js,jsx}'",
+    "eslint:fix": "eslint 'src/**/*.{vue,js,jsx}' --fix -o airbnb.html --format html",
+    "lint": "npm run eslint && npm run stylelint",
+    "lint:fix": "npm run eslint:fix && npm run stylelint:fix"
   },
   "author": "",
   "license": "ISC",
@@ -47,8 +53,10 @@
     "image-webpack-loader": "^6.0.0",
     "less": "^3.12.2",
     "less-loader": "^6.2.0",
+    "lint-staged": "^10.2.11",
     "mini-css-extract-plugin": "^0.10.0",
     "postcss-loader": "^3.0.0",
+    "prettier": "^2.0.5",
     "style-loader": "^1.2.1",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",
@@ -66,6 +74,12 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
   },
   "lint-staged": {
     "src/**/*.{vue,js,jsx}": [

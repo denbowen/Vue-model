@@ -10,6 +10,7 @@ const ERR_TYPES = ['application/json', 'text/html', 'text/xml', '', null, undefi
 const NAME = '';
 
 /**
+ * @type 下载文件
  * @param 类型：object，字段包含：url：路径；header：请求头，默认为{};method：请求方式，默认为GET；param: url拼接参数，默认为{}；
  * data：请求体参数；timeout：最大延迟时间，默认是420000毫秒(7分钟)；name：下载文件的名字，默认为空。
  * @returns {Promise<unknown>}

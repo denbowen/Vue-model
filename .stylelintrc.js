@@ -1,11 +1,11 @@
-{
-  "extends": [
+module.exports = {
+  extends: [
     "stylelint-config-standard",
     "stylelint-config-recess-order",
     "stylelint-config-prettier"
   ],
-  "rules": {
-    "no-empty-source": 0,
+  rules: {
+    "no-empty-source": null,
     "no-descending-specificity": null,
     "at-rule-no-unknown": [
       true,
