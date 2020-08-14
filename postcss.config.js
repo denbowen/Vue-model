@@ -1,6 +1,7 @@
 const autoprefixer = require('autoprefixer');
 
-// postcss.config.js
+// postcss配置文件
 module.exports = {
-  plugins: [autoprefixer()]
+  parser: 'postcss-scss', // 在postcss情况下，可以在less中加行内注释
+  plugins: [autoprefixer()],
 };
