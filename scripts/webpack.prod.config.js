@@ -12,11 +12,12 @@ module.exports = merge(baseConfig, {
   mode: 'production',
   devtool: 'inline-source-map',
   output: {
-    filename: '[name].[chunkhash:8].js',
-    chunkFilename: '[name].[chunkhash:8].js',
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[name].[chunkhash].js',
     publicPath: './',
   },
   optimization: {
+    minimize: true,
     minimizer: [
       new TerserPlugin({
         cache: true, // 开启缓存
