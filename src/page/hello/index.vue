@@ -13,15 +13,21 @@
 </template>
 
 <script>
-import { Affix, DatePicker, Button as AButton } from 'ant-design-vue';
+import { Affix as AAffix, DatePicker, Button as AButton } from 'ant-design-vue';
 import HelloImage from '@src/component/image/index.vue';
 
 const { RangePicker: ARangePicker } = DatePicker;
 
 export default {
   name: 'index',
+  data() {
+    return {
+      top: 10,
+      bottom: 10,
+    };
+  },
   components: {
-    Affix,
+    AAffix,
     AButton,
     ARangePicker,
     HelloImage,
@@ -31,6 +37,10 @@ export default {
 
 <style lang="less" scoped>
 .hello {
+  .ant-btn-primary {
+    color: beige;
+  }
+
   > div:first-child {
     font-size: 24px;
     font-weight: bold;

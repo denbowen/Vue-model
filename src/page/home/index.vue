@@ -76,7 +76,15 @@
 </template>
 
 <script>
-import { Table as ATable, Tree as ATree, Button as AButton } from 'ant-design-vue';
+import {
+  Divider as ADivider,
+  Table as ATable,
+  Switch as ASwitch,
+  Tree as ATree,
+  Button as AButton,
+  Icon as AIcon,
+  Tag as ATag,
+} from 'ant-design-vue';
 
 const { TreeNode: ATreeNode } = ATree;
 
@@ -145,10 +153,14 @@ export default {
     };
   },
   components: {
+    AButton,
+    ADivider,
+    ASwitch,
+    AIcon,
+    ATag,
     ATree,
     ATable,
     ATreeNode,
-    AButton,
   },
   methods: {
     onSelect(selectedKeys, info) {
