@@ -1,7 +1,8 @@
 import Home from '@src/page/home';
+import helloRoutes from './hello';
 
 // 路由的routes文件
-const routes = [
+const index = [
   {
     path: '/',
     name: 'home',
@@ -11,7 +12,12 @@ const routes = [
     path: '/hello',
     name: 'hello',
     component: () => import('@src/page/hello'),
+    children: helloRoutes,
+  },
+  {
+    path: '*',
+    redirect: '/',
   },
 ];
 
-export default routes;
+export default index;

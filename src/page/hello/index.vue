@@ -1,54 +1,65 @@
 <template>
   <div class="hello">
-    <div>hello页面</div>
-    <div>hello world</div>
-    <hello-image />
-    <a-affix :offset-top="top">
-      <a-button type="primary" @click="top += 10">
-        Affix top
-      </a-button>
-    </a-affix>
-    <a-range-picker />
+    <a-menu v-model="current" mode="horizontal">
+      <a-menu-item key="mail">
+        <a-icon type="mail" />
+        <span>第一项</span>
+      </a-menu-item>
+      <a-menu-item key="app">
+        <a-icon type="appstore" />
+        <span>第二项</span>
+      </a-menu-item>
+      <a-sub-menu>
+        <span slot="title" class="submenu-title-wrapper">
+          <a-icon type="setting" />
+          <span>第三项</span>
+        </span>
+        <a-menu-item-group title="Item 1">
+          <a-menu-item key="setting:1">
+            Option 1
+          </a-menu-item>
+          <a-menu-item key="setting:2">
+            Option 2
+          </a-menu-item>
+        </a-menu-item-group>
+        <a-menu-item-group title="Item 2">
+          <a-menu-item key="setting:3">
+            Option 3
+          </a-menu-item>
+          <a-menu-item key="setting:4">
+            Option 4
+          </a-menu-item>
+        </a-menu-item-group>
+      </a-sub-menu>
+      <a-menu-item key="alipay">
+        <a href="https://antdv.com" target="_blank" rel="noopener noreferrer">
+          <span>第四项</span>
+        </a>
+      </a-menu-item>
+    </a-menu>
   </div>
 </template>
 
 <script>
-import { Affix as AAffix, DatePicker, Button as AButton } from 'ant-design-vue';
-import HelloImage from '@src/component/image/index.vue';
+import { Icon as AIcon, Menu as AMenu } from 'ant-design-vue';
 
-const { RangePicker: ARangePicker } = DatePicker;
+const { SubMenu: ASubMenu, ItemGroup: AMenuItemGroup, Item: AMenuItem } = AMenu;
 
 export default {
   name: 'index',
   data() {
     return {
-      top: 10,
-      bottom: 10,
+      current: ['mail'],
     };
   },
   components: {
-    AAffix,
-    AButton,
-    ARangePicker,
-    HelloImage,
+    AIcon,
+    AMenu,
+    ASubMenu,
+    AMenuItemGroup,
+    AMenuItem,
   },
 };
 </script>
 
-<style lang="less" scoped>
-.hello {
-  .ant-btn-primary {
-    color: beige;
-  }
-
-  > div:first-child {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  > div:last-child {
-    font-size: 14px;
-    color: aqua;
-  }
-}
-</style>
+<style lang="less" scoped></style>
