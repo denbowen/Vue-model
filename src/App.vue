@@ -3,11 +3,16 @@
 </template>
 
 <script>
+const a = 1;
+
 export default {
   name: 'App',
   components: {},
   data() {
     return {};
+  },
+  mounted() {
+    console.log(a);
   },
 };
 </script>
