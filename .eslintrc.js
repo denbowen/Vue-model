@@ -42,6 +42,7 @@ module.exports = {
     'no-new': 0,
     'max-len': 0,
     'quote-props': 0,
+    'no-empty': 0,
     'prefer-promise-reject-errors': 0,
     'import/extensions': 0,
     'import/named': 0,

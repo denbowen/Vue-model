@@ -1,0 +1,13 @@
+/static/
+/dist/
+
+*.js
+*.jsx
+*.ts
+*.json
+*.svg
+*.png
+*.jpg
+*.webp
+*.ttf
+*.woff
